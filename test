@@ -1,0 +1,26 @@
+import sys
+import time
+import random
+
+
+
+def slow_type(t):
+    typing_speed = 50 #wpm
+    for l in t:
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
+
+
+def fast_type(t):
+    typing_speed = 100 #wpm
+    for l in t:
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
+
+
+slow_type("welcome to brazil, you cannot leave brazil\n")
+fast_type("I do not want to go to brazil")
+
+

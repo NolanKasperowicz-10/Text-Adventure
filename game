@@ -1,0 +1,45 @@
+import sys
+import time
+import random
+from turtle import clear
+
+
+typing_speed = 50 #wpm
+def slow_type(t):
+    for l in t:
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
+
+
+
+def Start():
+    slow_type("welcome to your local subway\n1. Italian\n2. Wheat\n3. Italian Herbs + cheese\n4. Flatbread\n")
+    a1 = input()
+    if a1 == "1":
+        choiceItalian()
+
+
+
+def choiceItalian():
+    slow_type("you are going to italy\n")
+    a2 = input("Will you go to Italy?\n1. No, I do not want to go to italy\n2. I will go to italy\n")
+
+    if a2 == "1":
+        slow_type("you win this time")
+    else:
+        print("YOU DIED")
+        slow_type("\x1B[3myou went to italy\x1B[0m")
+
+def choiceWheat():
+    slow_type("basic mf\n")
+    if a3 == input()
+
+
+
+
+
+
+
+
+Start()
