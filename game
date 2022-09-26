@@ -20,7 +20,8 @@ def Start():
         choiceItalian()
     elif answer1 == "2":
         choiceWheat()
-
+    elif answer1 == "3":
+        choiceItalianHC
 
 
 def choiceItalian():
@@ -44,6 +45,19 @@ def choiceWheat():
         print("YOU DIED\n")
         slow_type("\x1B[3myou were struck by a speeding car\x1B[0m")
         quit()
+
+
+def choiceItalianHC():
+    slow_type("That will Be $12356349")
+    a3 = input("Your Balance is $12\n !. Try to pay\n 2. Rob the store\n 3. Pick again\n")
+    if a3 == "1":
+        slow_type("card Declined")
+        slow_type("You died from the realization that you are poor")
+        print("YOU DIED\n")
+        slow_type("\x1B[3mYou were to poor\x1B[0m")
+    elif a3 == "2":
+        slow_type("You pull the 6 pound light artillery cannon out of your pocket and aim it at the clerk")
+    else: Start()
 
 
 Start()
