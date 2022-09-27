@@ -33,7 +33,8 @@ def Start():
 
 def choiceItalian():
     slow_type("you are going to italy\n")
-    a2 = input("Will you go to Italy?\n1. No, I do not want to go to italy\n2. I will go to italy\n")
+    slow_type("Will you go to Italy?\n1. No, I do not want to go to italy\n2. I will go to italy\n")
+    a2 = input()
 
     if a2 == "1":
         slow_type("you win this time\n")
@@ -139,10 +140,36 @@ def choiceCodeEntered():
 
 def railRide():
     slow_type("The train chuggs along through the darkness, for what seems like hours\n")
-    slow_type("Suddenly, you see light")
+    slow_type("Suddenly, you see light\n")
+    slow_type("WHO HAS ENTERED THE HALL OF THE SANDWICH GOD?\n") 
+    slow_type("NO MATTER, I SHALL DESTROY YOU\n")
+    godBattle()
 
-
-
+def godBattle():
+    slow_type("Choose your weapon\n")
+    slow_type("1. 6 pound light artillery cannon\n2. The entire US military budget\n3. Real Knife\n4. A Sandwich\n")
+    a6 = input()
+    if a6 == "1":
+        slow_type("You aim the light arttilery cannon at the Sandwich God, and fire\n")
+        time.sleep(1)
+        slow_type("The shell flies towards the Sandwich God, but it is no good. It does no damage\n")
+        print("YOU DIED\n")
+        slow_type("\x1B[3mYou were obliterated by the Sandwich God\x1B[0m\n")
+        Start()
+    elif a6 == "2":
+        time.sleep(1)
+        print("YOU DIED\n")
+        slow_type("\x1B[3mYou were crushed by 1704173286.6891 lbs. of US $100 bills\x1B[0m\n")
+        Start()
+    elif a6 == "3":
+        slow_type("You found the Real Knife!\n")
+        slow_type("You attempt to stab the Sandwich god, but he melts the knife before you can\n")
+        time.sleep(1)
+        print("YOU DIED\n")
+        slow_type("\x1B[3mYour hand was melted off by the Sandwich God\x1B[0m\n")
+        Start()
+    elif a6 == "4":
+        slow_type("You pull an italian meatball footlong sandwich from your back pocket\n")
 
 
 

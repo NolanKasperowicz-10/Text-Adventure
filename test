@@ -21,3 +21,5 @@ if a5 == "1":
             slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
             print("YOU DIED\n")
             slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m")
+
+            1704173286.6891
