@@ -14,7 +14,7 @@ def slow_type(t):
 
 
 def Start():
-    slow_type("welcome to your local subway\n1. Italian\n2. Wheat\n3. Italian Herbs + Cheese\n4. Flatbread\n, Instant progress(for the weak)")
+    slow_type("welcome to your local subway\n1. Italian\n2. Wheat\n3. Italian Herbs + Cheese\n4. Flatbread\n5. Instant progress(for the weak)\n")
     answer1 = input()
     if answer1 == "1":
         choiceItalian()
@@ -25,6 +25,8 @@ def Start():
     elif answer1 == "69420":
         choiceSecret()
     elif answer1 == "3468":
+        choiceCodeEntered()
+    elif answer1 == "5":
         choiceCodeEntered()
 
 def choiceItalian():
@@ -102,6 +104,7 @@ def choiceRailWayCar():
         answer2 = input()
         if answer2 == "1":
             slow_type("You get on the railway car, and it lurches foward\n")
+            railRide()
         elif answer2 == "2":
             slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
             print("YOU DIED\n")
@@ -115,9 +118,13 @@ def choiceCodeEntered():
         slow_type("You walk to the door and open it, revealing stairs leading far below ground\nYou begin to walk down the stairs, until you reach a platform with a rail car waiting for you\n")
         choiceRailWayCar()
     elif a5 == "2":
-        slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
+        slow_type("The clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly\n")
+        time.sleep(1)
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m\n")
+
+def railRide():
+    
 
 
 
