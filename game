@@ -88,7 +88,7 @@ def choiceItalianHC():
 
 
 def choiceSecret():
-    slow_type("grapenoseboy.com")
+    slow_type("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 def choiceFlatbread():
     slow_type("Ok, would you like that flat or thick?\n")
