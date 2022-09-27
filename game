@@ -14,7 +14,7 @@ def slow_type(t):
 
 
 def Start():
-    slow_type("welcome to your local subway\n1. Italian\n2. Wheat\n3. Italian Herbs + Cheese\n4. Flatbread\n5. Instant progress(for the weak)\n")
+    slow_type("welcome to your local subway, what kind of bread would you like\n1. Italian\n2. Wheat\n3. Italian Herbs + Cheese\n4. Flatbread\n5. Instant progress(for the weak)\n")
     answer1 = input()
     if answer1 == "1":
         choiceItalian()
@@ -28,18 +28,25 @@ def Start():
         choiceCodeEntered()
     elif answer1 == "5":
         choiceCodeEntered()
+    elif answer1 == "4":
+        choiceFlatbread()
 
 def choiceItalian():
     slow_type("you are going to italy\n")
     a2 = input("Will you go to Italy?\n1. No, I do not want to go to italy\n2. I will go to italy\n")
 
     if a2 == "1":
-        slow_type("you win this time")
+        slow_type("you win this time\n")
+        time.sleep(1)
+        print("3") 
+        Start()
+
     else:
         print("YOU DIED\n")
         slow_type("\x1B[3myou went to italy\x1B[0m\n")
         time.sleep(1)
         print("3")
+        Start()
 
 
 def choiceWheat():
@@ -54,19 +61,20 @@ def choiceWheat():
         slow_type("\x1B[3myou were struck by a speeding car\x1B[0m\n")
         time.sleep(1)
         print("4")
-
+        Start()
 
 def choiceItalianHC():
     slow_type("That will Be $12356349\n")
     slow_type("Your balance is $12\n")
-    a3 = input("1. Try to pay\n 2. Rob the store\n 3. Pick again\n")
+    a3 = input("1. Try to pay\n2. Rob the store\n3. Pick again\n")
     if a3 == "1":
-        slow_type("card Declined\n")
-        slow_type("You died from the realization that you are poor\n")
+        slow_type("Card declined\n")
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were to poor\x1B[0m\n")
         time.sleep(1)
         print("6")
+        Start()
+
 
     elif a3 == "2":
         slow_type("You pull the 6 pound light artillery cannon out of your pocket and aim it at the clerk\n")
@@ -75,6 +83,7 @@ def choiceItalianHC():
         slow_type("\x1B[3mYou were obliterated by a laser guided bomb\x1B[0m\n")
         time.sleep(1)
         print("6")
+        Start()
     else: Start()
 
 
@@ -84,7 +93,7 @@ def choiceSecret():
 def choiceFlatbread():
     slow_type("Ok, would you like that flat or thick?\n")
     a4 = input("1. I'd like it flat\n2. I'd like it thick\n")
-    if a4 =="1":
+    if a4 == "1":
         slow_type("Of course, here you go\n")
         slow_type("As you bite into the flatbread, you realize it is infact weapons grade plutonium\n")
         slow_type("You try to spit it out, but it is to late\n")
@@ -93,11 +102,14 @@ def choiceFlatbread():
         slow_type("\x1B[3mYou succumbed to acute radiation poisoning\x1B[0m\n")
         time.sleep(1)
         print("8")
+        Start()
     elif a4 == "2":
         slow_type("Its \x1B[3mflatbread\x1B[0m you nincompoop\n")
+        time.sleep(2)
         slow_type("You leave the subway in shame\n")
         time.sleep(1)
         print("8")
+        Start()
 
 def choiceRailWayCar():
         slow_type("1. Get on the railcar\n2. Don't get on the railcar\n")
@@ -109,6 +121,7 @@ def choiceRailWayCar():
             slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
             print("YOU DIED\n")
             slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m\n")
+            Start()
 
 
 def choiceCodeEntered():
@@ -122,10 +135,11 @@ def choiceCodeEntered():
         time.sleep(1)
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m\n")
+        Start()
 
 def railRide():
-    
-
+    slow_type("The train chuggs along through the darkness, for what seems like hours\n")
+    slow_type("Suddenly, you see light")
 
 
 
