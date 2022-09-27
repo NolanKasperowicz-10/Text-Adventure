@@ -1,25 +1,32 @@
-import sys
 import time
-import random
-
-
-
-typing_speed = 75 #wpm
-def slow_type(t):
-    for l in t:
-        sys.stdout.write(l)
-        sys.stdout.flush()
-        time.sleep(random.random()*10.0/typing_speed)
-
-
-if a5 == "1":
-        slow_type("You walk to the door and open it, revealing stairs leading far below ground\nYou begin to walk down the stairs, until you reach a platform with a rail car waiting for you")
-        answer2 = input()
-        if answer2 == "1":
-            slow_type("You get on the railway car, and it lurches foward\n")
-        else: 
-            slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
-            print("YOU DIED\n")
-            slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m")
-
-            1704173286.6891
+import datetime
+ 
+# Create class that acts as a countdown
+def countdown(h, m, s):
+ 
+    # Calculate the total number of seconds
+    total_seconds = h * 3600 + m * 60 + s
+ 
+    # While loop that checks if total_seconds reaches zero
+    # If not zero, decrement total time by one second
+    while total_seconds > 0:
+ 
+        # Timer represents time left on countdown
+        timer = datetime.timedelta(seconds = total_seconds)
+        
+        # Prints the time left on the timer
+        print(timer, end="\r")
+ 
+        # Delays the program one second
+        time.sleep(1)
+ 
+        # Reduces total time by one second
+        total_seconds -= 1
+ 
+    print("Bzzzt! The countdown is at zero seconds!")
+ 
+# Inputs for hours, minutes, seconds on timer
+h = input("Enter the time in hours: ")
+m = input("Enter the time in minutes: ")
+s = input("Enter the time in seconds: ")
+countdown(int(h), int(m), int(s))

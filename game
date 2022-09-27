@@ -170,10 +170,14 @@ def godBattle():
         Start()
     elif a6 == "4":
         slow_type("You pull an italian meatball footlong sandwich from your back pocket\n")
+        swordBattle()
 
-
-
-
+def swordBattle():
+    slow_type("How will you fight?")
+    slow_type("1. Offensive\n2. Defensive")
+    a7 = input()
+    if a7 == "1":
+        slow_type("You charge at the snadwich god, swinging the sandwich wildly")
 
 
 
