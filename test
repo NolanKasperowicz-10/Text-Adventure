@@ -1,0 +1,9 @@
+if a5 == "1":
+        slow_type("You walk to the door and open it, revealing stairs leading far below ground\nYou begin to walk down the stairs, until you reach a platform with a rail car waiting for you")
+        answer2 = input()
+        if answer2 == "1":
+            slow_type("You get on the railway car, and it lurches foward\n")
+        else: 
+            slow_type("the clerk sees your hesitation and immediatly ignites 4.86 tons of dynamite, killing you instantly")
+            print("YOU DIED\n")
+            slow_type("\x1B[3mYou were blown up by the clerk\x1B[0m")
