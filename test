@@ -4,25 +4,77 @@ import random
 
 def death():
     print("YOU DIED")
+    quit()
 
 def combat():
-    randomLetter = random.choice(string.ascii_lowercase)
-    print(randomLetter)
-    root = Tk()
-    root.withdraw()
-    root.after(5000, death)
-    root.mainloop
-    a1 = input()
-    if a1 == randomLetter:
-        print("you win")
-    if a1 == randomLetter:
-        root = Tk()
-        root.withdraw() 
-        root.destroy
-   
-        
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy
+   randomLetter = random.choice(string.ascii_lowercase)
+   print(randomLetter)
+   root = Tk()
+   root.withdraw()
+   root.after(5000, death)
+   root.mainloop
+   a1 = input()
+   if a1 == randomLetter:
+       root = Tk()
+       root.withdraw() 
+       root.destroy(root.after(5000, death))
 
-
+combat()
 
 
 

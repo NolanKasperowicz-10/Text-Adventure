@@ -7,15 +7,25 @@ import string
 
 def death():
     slow_type("YOU DIED")
+    slow_type("\x1B[3mYou could not keep up with the Sandwich God's attacks\x1B[0m\n")
+
+def death1():
+    slow_type("YOU DIED")
+    slow_type("\x1B[3mThe giant sandwich crushed you\x1B[0m\n")
 
 def slow_type(t):
-    typing_speed = 75 #wpm
     for l in t:
+        typing_speed = 75 #wpm
         sys.stdout.write(l)
         sys.stdout.flush()
         time.sleep(random.random()*10.0/typing_speed)
 
-
+def extra_slow_typing():
+    for l in t:
+        typing_speed = 25 #wpm
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
 
 def Start():
     slow_type("welcome to your local subway, what kind of bread would you like\n1. Italian\n2. Wheat\n3. Italian Herbs + Cheese\n4. Flatbread\n5. Instant progress(for the weak)\n")
@@ -46,14 +56,14 @@ def choiceItalian():
     if a2 == "1":
         slow_type("you win this time\n")
         time.sleep(1)
-        print("3") 
+        slow_type(" Code part one: 3") 
         Start()
 
     else:
         print("YOU DIED\n")
         slow_type("\x1B[3myou went to italy\x1B[0m\n")
         time.sleep(1)
-        print("3")
+        slow_type(" Code part one: 3")
         Start()
 
 
@@ -68,7 +78,7 @@ def choiceWheat():
         print("YOU DIED\n")
         slow_type("\x1B[3myou were struck by a speeding car\x1B[0m\n")
         time.sleep(1)
-        print("4")
+        slow_type("Code part two: 4")
         Start()
 
 def choiceItalianHC():
@@ -80,7 +90,7 @@ def choiceItalianHC():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were to poor\x1B[0m\n")
         time.sleep(1)
-        print("6")
+        slow_type("Code part three: 6")
         Start()
 
 
@@ -90,7 +100,7 @@ def choiceItalianHC():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were obliterated by a laser guided bomb\x1B[0m\n")
         time.sleep(1)
-        print("6")
+        slow_type("Code part three: 6")
         Start()
     else: Start()
 
@@ -109,14 +119,14 @@ def choiceFlatbread():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou succumbed to acute radiation poisoning\x1B[0m\n")
         time.sleep(1)
-        print("8")
+        slow_type("Code part four: 8")
         Start()
     elif a4 == "2":
         slow_type("Its \x1B[3mflatbread\x1B[0m you nincompoop\n")
         time.sleep(2)
         slow_type("You leave the subway in shame\n")
         time.sleep(1)
-        print("8")
+        slow_type("Code part four: 8")
         Start()
 
 def choiceRailWayCar():
@@ -180,21 +190,115 @@ def godBattle():
         swordBattle()
 
 def swordBattle():
-    slow_type("How will you fight?")
-    slow_type("1. Offensive\n2. Defensive")
+    slow_type("How will you fight?\n")
+    slow_type("1. Offensive\n2. Defensive\n")
     a7 = input()
     if a7 == "1":
-        slow_type("You charge at the sandwich god, swinging the sandwich wildly")
+        slow_type("You charge at the sandwich god, swinging the sandwich wildly\n")
         print("\x1B[3mFIGHT!\x1B[0m\n")
-        
-def fightMiniGame():
-    print("")
+        combat()
+    elif a7 == "2":
+        slow_type("The Sandwich God swings a giant sandwich towards you\n")
+        print("\x1B[3mFIGHT!\x1B[0m\n")
+        randomLetter = random.choice(string.ascii_lowercase)
+        print(randomLetter)
+        root = Tk()
+        root.withdraw()
+        root.after(2000, death1)
+        root.mainloop
+        a1 = input()
+        if a1 == randomLetter:
+            root = Tk()
+            root.withdraw() 
+            root.destroy 
+        if a1 == randomLetter:
+            deflected()
 
+def combat():
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.quit 
+    if a1 == randomLetter:
+        attacked()
+def godDefeat():
+    time.sleep(2)
+    slow_type("The Great Sandwich Crown decends upon you!\n")
+    slow_type("Will you accept it?")
+    slow_type("1. Yes\n2. No")
+    a8 = input()
+    if a8 == "1":
+        slow_type("You have become the new Sandwich God\n")
+        slow_type("You rule powerfully as the Sandwich god, ruler of all sandwich stores,\nfor all eternity\n")
+        extra_slow_typing("\x1B[3mTHE END\x1B[0m\n")
+        credits()
+    elif a8 == "2":
+        slow_type("you choose not to accept the crown, and are teleported back to the outside world.\n")
+        slow_type("As it turns out, you had destroyed the Sandwich God, and without a new one, every sandwich store in the world had closed.\n")
+        time.sleep(1)
+        slow_type("you are single handedly responisble for the downfall of all sandwiches\n")
+        extra_slow_typing("\x1B[3mTHE END\x1B[0m\n")
+        credits()
 
+def deflected():
+    slow_type("You deflect the Sandwich God's giant sandwich blade\n")
+    slow_type("You run up the sandwich, dragging the meatball sandwich with you,\nAnd in a single upward slash you cut the Sandwich God in half\n")
+    godDefeat()
 
+def attacked():
+    slow_type("You block all of the Sandwich God's attacks\nRush towards him, and with with the force of a thousand (meat)balls,\nYou obliterate the Sandwich God\n")
+    godDefeat()
 
-
-
+def credits():
+    slow_type("Story: Nolan Kasperowicz\n")
+    slow_type("Programming: Nolan Kasperowicz\n")
+    slow_type("Thanks For Playing!")
+    slow_type("Would you like to play agaim?\n1. Yes\n2. No\n")
+    a9 = input()
+    if a9 == "1":
+        Start()
+    elif a9 == "2":
+        quit()
 
 
 

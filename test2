@@ -1,12 +1,58 @@
+
 import string
 import random
+from tkinter import *
+
+def death():
+    print("YOU DIED")
+    quit()
+
+def combat():
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy
+        
+combat()
 
 
-
-
-
-
-
-
-randomLetter = random.choice(string.ascii_letters)
-print(randomLetter)
