@@ -1,5 +1,6 @@
 import sys
 import time
+import datetime
 import random
 
 
@@ -30,6 +31,9 @@ def Start():
         choiceCodeEntered()
     elif answer1 == "4":
         choiceFlatbread()
+    elif answer1 == "e":
+        godBattle()
+
 
 def choiceItalian():
     slow_type("you are going to italy\n")
@@ -177,7 +181,7 @@ def swordBattle():
     slow_type("1. Offensive\n2. Defensive")
     a7 = input()
     if a7 == "1":
-        slow_type("You charge at the snadwich god, swinging the sandwich wildly")
+        slow_type("You charge at the sandwich god, swinging the sandwich wildly")
 
 
 
