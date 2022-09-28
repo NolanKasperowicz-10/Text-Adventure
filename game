@@ -264,7 +264,7 @@ def combat():
 def godDefeat():
     time.sleep(2)
     slow_type("The Great Sandwich Crown decends upon you!\n")
-    slow_type("Will you accept it?")
+    slow_type("Will you accept it?\n")
     slow_type("1. Yes\n2. No")
     a8 = input()
     if a8 == "1":
@@ -292,7 +292,7 @@ def attacked():
 def credits():
     slow_type("Story: Nolan Kasperowicz\n")
     slow_type("Programming: Nolan Kasperowicz\n")
-    slow_type("Thanks For Playing!")
+    slow_type("Thanks For Playing!\n")
     slow_type("Would you like to play agaim?\n1. Yes\n2. No\n")
     a9 = input()
     if a9 == "1":

@@ -1,82 +1,34 @@
 from tkinter import *
 import string
 import random
+import time
+root = Tk()
 
-def death():
+def death1():
     print("YOU DIED")
     quit()
 
+def text():
+    print("sdhasdgsa")
+
 def combat():
+   
    randomLetter = random.choice(string.ascii_lowercase)
    print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
+   root.after(5000, death1)
+   root.withdraw
    a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy
+   if a1 == randomLetter:  
+    root.after_cancel(root)
+    root.destroy(root)
    randomLetter = random.choice(string.ascii_lowercase)
    print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
+   root.after(5000, death1)
+   root.withdraw
    a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
-   a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
-   a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
-   a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root = Tk()
-   root.withdraw()
-   root.after(5000, death)
-   root.mainloop
-   a1 = input()
-   if a1 == randomLetter:
-       root = Tk()
-       root.withdraw() 
-       root.destroy(root.after(5000, death))
+   if a1 == randomLetter:  
+    root.after_cancel(root)  
+    root.destroy(root)
 
 combat()
-
-
-
-
-
+   
