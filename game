@@ -2,11 +2,14 @@ import sys
 import time
 import datetime
 import random
+from tkinter import *
+import string
 
+def death():
+    slow_type("YOU DIED")
 
-
-typing_speed = 75 #wpm
 def slow_type(t):
+    typing_speed = 75 #wpm
     for l in t:
         sys.stdout.write(l)
         sys.stdout.flush()
@@ -182,9 +185,10 @@ def swordBattle():
     a7 = input()
     if a7 == "1":
         slow_type("You charge at the sandwich god, swinging the sandwich wildly")
-
-
-
+        print("\x1B[3mFIGHT!\x1B[0m\n")
+        
+def fightMiniGame():
+    print("")
 
 
 

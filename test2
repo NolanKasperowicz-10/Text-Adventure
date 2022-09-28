@@ -1,11 +1,12 @@
-a1 = input()
-    root = Tk()
-    
-    root.after(5, death)
-    root.mainloop
-    if a1 == "1":
-        print("you win")
-    if a1 == "1":
-        root = Tk()
-        root.withdraw() 
-        root.destroy
+import string
+import random
+
+
+
+
+
+
+
+
+randomLetter = random.choice(string.ascii_letters)
+print(randomLetter)
