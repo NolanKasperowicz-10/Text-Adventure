@@ -1,0 +1,25 @@
+from tkinter import *
+
+def death():
+    print("YOU DIED")
+
+def combat():
+    root = Tk()
+    root.withdraw()
+    root.after(5000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == "1":
+        print("you win")
+    if a1 == "1":
+        root = Tk()
+        root.withdraw() 
+        root.destroy
+
+combat()
+
+
+
+
+
+
