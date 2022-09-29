@@ -20,7 +20,7 @@ def slow_type(t):
         sys.stdout.flush()
         time.sleep(random.random()*10.0/typing_speed)
 
-def extra_slow_typing():
+def extra_slow_typing(t):
     for l in t:
         typing_speed = 25 #wpm
         sys.stdout.write(l)

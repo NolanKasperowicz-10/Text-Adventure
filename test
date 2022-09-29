@@ -3,32 +3,80 @@ import string
 import random
 import time
 root = Tk()
+import sys
 
-def death1():
-    print("YOU DIED")
+def slow_type(t):
+    for l in t:
+        typing_speed = 75 #wpm
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
+
+
+def credits():
+    slow_type("Story: Nolan Kasperowicz\n")
+    slow_type("Programming: Nolan Kasperowicz\n")
+    slow_type("Thanks For Playing!\n")
+    slow_type("Would you like to play agaim?\n1. Yes\n2. No\n")
+    a9 = input()
+    if a9 == "1":
+        print("sd")
+    elif a9 == "2":
+        quit()
+
+def death():
+    slow_type("YOU DIED")
     quit()
 
 def text():
     print("sdhasdgsa")
 
 def combat():
-   
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root.after(5000, death1)
-   root.withdraw
-   a1 = input()
-   if a1 == randomLetter:  
-    root.after_cancel(root)
-    root.destroy(root)
-   randomLetter = random.choice(string.ascii_lowercase)
-   print(randomLetter)
-   root.after(5000, death1)
-   root.withdraw
-   a1 = input()
-   if a1 == randomLetter:  
-    root.after_cancel(root)  
-    root.destroy(root)
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        root.destroy 
+    randomLetter = random.choice(string.ascii_lowercase)
+    print(randomLetter)
+    root = Tk()
+    root.withdraw()
+    root.after(10000, death)
+    root.mainloop
+    a1 = input()
+    if a1 == randomLetter:
+        root = Tk()
+        root.withdraw() 
+        
+    credits()
 
 combat()
    
