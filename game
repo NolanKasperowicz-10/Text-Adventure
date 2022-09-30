@@ -15,7 +15,7 @@ def death1():
 
 def slow_type(t):
     for l in t:
-        typing_speed = 75 #wpm
+        typing_speed = 100 #wpm
         sys.stdout.write(l)
         sys.stdout.flush()
         time.sleep(random.random()*10.0/typing_speed)
@@ -40,8 +40,6 @@ def Start():
         choiceSecret()
     elif answer1 == "3468":
         choiceCodeEntered()
-    elif answer1 == "5":
-        choiceCodeEntered()
     elif answer1 == "4":
         choiceFlatbread()
     elif answer1 == "e":
@@ -56,14 +54,14 @@ def choiceItalian():
     if a2 == "1":
         slow_type("you win this time\n")
         time.sleep(1)
-        slow_type(" Code part one: 3") 
+        slow_type(" Code part one: 3\n") 
         Start()
 
     else:
         print("YOU DIED\n")
         slow_type("\x1B[3myou went to italy\x1B[0m\n")
         time.sleep(1)
-        slow_type(" Code part one: 3")
+        slow_type(" Code part one: 3\n")
         Start()
 
 
@@ -78,7 +76,7 @@ def choiceWheat():
         print("YOU DIED\n")
         slow_type("\x1B[3myou were struck by a speeding car\x1B[0m\n")
         time.sleep(1)
-        slow_type("Code part two: 4")
+        slow_type("Code part two: 4\n")
         Start()
 
 def choiceItalianHC():
@@ -90,7 +88,7 @@ def choiceItalianHC():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were to poor\x1B[0m\n")
         time.sleep(1)
-        slow_type("Code part three: 6")
+        slow_type("Code part three: 6\n")
         Start()
 
 
@@ -100,7 +98,7 @@ def choiceItalianHC():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou were obliterated by a laser guided bomb\x1B[0m\n")
         time.sleep(1)
-        slow_type("Code part three: 6")
+        slow_type("Code part three: 6\n")
         Start()
     else: Start()
 
@@ -119,14 +117,14 @@ def choiceFlatbread():
         print("YOU DIED\n")
         slow_type("\x1B[3mYou succumbed to acute radiation poisoning\x1B[0m\n")
         time.sleep(1)
-        slow_type("Code part four: 8")
+        slow_type("Code part four: 8\n")
         Start()
     elif a4 == "2":
         slow_type("Its \x1B[3mflatbread\x1B[0m you nincompoop\n")
         time.sleep(2)
         slow_type("You leave the subway in shame\n")
         time.sleep(1)
-        slow_type("Code part four: 8")
+        slow_type("Code part four: 8\n")
         Start()
 
 def choiceRailWayCar():
@@ -200,72 +198,34 @@ def swordBattle():
     elif a7 == "2":
         slow_type("The Sandwich God swings a giant sandwich towards you\n")
         print("\x1B[3mFIGHT!\x1B[0m\n")
-        randomLetter = random.choice(string.ascii_lowercase)
-        print(randomLetter)
-        root = Tk()
-        root.withdraw()
-        root.after(2000, death1)
-        root.mainloop
-        a1 = input()
-        if a1 == randomLetter:
-            root = Tk()
-            root.withdraw() 
-            root.destroy 
-        if a1 == randomLetter:
-            deflected()
+        print("Press A!")
+        b1 = input()
+        if b1 == "a":
+            print("Press B!")
+            b2 = input()
+            if b2 == "b":
+                deflected()
+        else:
+            slow_type("You loose!")
+            
 
 def combat():
-    randomLetter = random.choice(string.ascii_lowercase)
-    print(randomLetter)
-    root = Tk()
-    root.withdraw()
-    root.after(10000, death)
-    root.mainloop
-    a1 = input()
-    if a1 == randomLetter:
-        root = Tk()
-        root.withdraw() 
-        root.destroy 
-    randomLetter = random.choice(string.ascii_lowercase)
-    print(randomLetter)
-    root = Tk()
-    root.withdraw()
-    root.after(10000, death)
-    root.mainloop
-    a1 = input()
-    if a1 == randomLetter:
-        root = Tk()
-        root.withdraw() 
-        root.destroy 
-    randomLetter = random.choice(string.ascii_lowercase)
-    print(randomLetter)
-    root = Tk()
-    root.withdraw()
-    root.after(10000, death)
-    root.mainloop
-    a1 = input()
-    if a1 == randomLetter:
-        root = Tk()
-        root.withdraw() 
-        root.destroy 
-    randomLetter = random.choice(string.ascii_lowercase)
-    print(randomLetter)
-    root = Tk()
-    root.withdraw()
-    root.after(10000, death)
-    root.mainloop
-    a1 = input()
-    if a1 == randomLetter:
-        root = Tk()
-        root.withdraw() 
-        root.quit 
-    if a1 == randomLetter:
-        attacked()
+    print("Press A!")
+    b1 = input()
+    if b1 == "a":
+        print("Press B!")
+        b2 = input()
+        if b2 == "b":
+            attacked()
+    else:
+        slow_type("You loose!")
+    
+    
 def godDefeat():
     time.sleep(2)
     slow_type("The Great Sandwich Crown decends upon you!\n")
     slow_type("Will you accept it?\n")
-    slow_type("1. Yes\n2. No")
+    slow_type("1. Yes\n2. No\n")
     a8 = input()
     if a8 == "1":
         slow_type("You have become the new Sandwich God\n")
