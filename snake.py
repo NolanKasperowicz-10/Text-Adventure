@@ -116,7 +116,7 @@ while True:
 
 
     # Check for a collision with the food
-    if head.distance(food) < 10:
+    if head.distance(food) < 20:
         # Move the food to a random spot
         x = random.randint(-290, 290)
         y = random.randint(-290, 290)
@@ -162,13 +162,12 @@ while True:
             time.sleep(1)
             head.goto(0,0)
             head.direction = "stop"
-        
             # Hide the segments
             for segment in segments:
                 segment.goto(1000, 1000)
-        
+            
             # Clear the segments list
-            segments.clear()
+            segments.clear
 
             # Reset the score
             score = 0

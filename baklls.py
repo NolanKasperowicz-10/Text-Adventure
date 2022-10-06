@@ -8,5 +8,5 @@ print(len(re.findall(input(), lettercount)))
 #for instance, I can ask it how many times "12a" occurs in a string
 
 def letterCount():
-  lettercount = input():
+  lettercount = input()
   print(len(re.findall(input(), letterCount)))
